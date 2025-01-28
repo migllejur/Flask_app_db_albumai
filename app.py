@@ -19,7 +19,11 @@ def home():
         return render_template("index.html", albums=filtered_rows)
     else:
         all_albums = Albumai.query.all()
-        return render_template("index.html", albums=all_albums, is_homepage=True)
+        metu_vidurkis = round(sum(album.metai for album in all_albums) / len(all_albums),
+                              2) if all_albums else 0
+        kainu_suma = round(sum(album.kainu_vidurkis for album in all_albums), 2) if all_albums else 0
+        return render_template("index.html", albums=all_albums, metu_vidurkis=metu_vidurkis,
+                               kainu_suma=kainu_suma, is_homepage=True)
 
 
 # select
