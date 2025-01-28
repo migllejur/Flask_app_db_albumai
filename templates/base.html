@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{{url_for('static', filename='styles.css')}}">
+    <title>Albumai (Flask CRUD app)</title>
+</head>
+<body>
+{%block content%}
+{%endblock%}
+{% if not is_homepage %}
+<p><a href="/">Grįžti į pagrindinį puslapį</a></p>
+{% endif %}
+</body>
+</html>

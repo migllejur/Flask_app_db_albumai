@@ -1,0 +1,35 @@
+{%extends "base.html"%}
+{%block content%}
+<h3>Top 20 albums of the 2020s so far</h3>
+<form action="" method="get">
+  <p><input type="text" name="search"></p>
+  <p><input type="submit" value="filter"></p>
+</form>
+<p><a href="/albumas/new">Pridėti naują albumą</a></p>
+<table>
+  <tr>
+    <th>id</th>
+    <th>atlikėjas</th>
+    <th>pavadinimas</th>
+    <th>metai</th>
+    <th>žanras</th>
+      <th>vidutinė albumo kaina</th>
+    <th>veiksmai</th>
+  </tr>
+  <tr>
+{%for album in albums%}
+<tr><td>{{album.id}}</td>
+  <td>{{album.atlikejas}}</td>
+  <td>{{album.pavadinimas}}</td>
+  <td>{{album.metai}}</td>
+    <td>{{album.zanras}}</td>
+    <td>{{album.kainu_vidurkis}}</td>
+  <td><a href="/albumas/{{album.id}}">žiūrėti</a> |
+      <a href="/albumas/edit/{{album.id}}">redaguoti</a> |
+  <form action="/albumas/delete/{{album.id}}" method="post">
+      <input type="submit" value="trinti" style="display:inline;">
+  </form></td>
+</tr>
+{%endfor%}
+</table>
+{%endblock%}

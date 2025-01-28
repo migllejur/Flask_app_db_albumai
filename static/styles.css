@@ -1,0 +1,39 @@
+body {
+    background-color: #F2EFE7;
+}
+
+p {
+    font-family: Helvetica, sans-serif;
+    color: #48A6A7;
+}
+
+a {
+color: #2973B2;
+}
+
+h3 {
+font-family: Arial, sans-serif;
+color: #2973B2;
+font-weight: bold;
+font-style: italic;
+}
+
+table {
+    width: 85%;
+    border: 2px solid #9ACBD0;
+    border-collapse: collapse;
+}
+
+th {
+    border: 2px solid #9ACBD0;
+    font-family: Helvetica, sans-serif;
+    color: #48A6A7;
+    font-weight: bold;
+
+}
+
+td {
+    border: 2px solid #9ACBD0;
+    font-family: Helvetica, sans-serif;
+    color: #48A6A7;
+}

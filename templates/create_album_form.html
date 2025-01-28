@@ -1,0 +1,19 @@
+{%extends "base.html"%}
+{%block content%}
+<h3>Įveskite naują albumą</h3>
+<form action="/albumas/new" method="post">
+  <p>Albumo atlikėjas:</p>
+  <p><input type="text" name="artist"></p>
+  <p>Albumo pavadinimas:</p>
+  <p><input type="text" name="title"></p>
+  <p>Albumo metai:</p>
+  <p><input type="text" name="year"></p>
+  <p>Albumo žanras:</p>
+  <p><input type="text" name="genre"></p>
+  <p>Albumo kaina internetu:</p>
+  <p><input type="text" name="price_online"></p>
+  <p>Albumo kaina fizinėje parduotuvėje:</p>
+  <p><input type="text" name="price_store"></p>
+  <p><input type="submit" value="išsaugoti"></p>
+</form>
+{%endblock%}

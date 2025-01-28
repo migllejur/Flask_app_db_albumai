@@ -1,0 +1,10 @@
+{%extends "base.html"%}
+{%block content%}
+<h3>{{album.atlikejas}} - {{album.pavadinimas}}</h3>
+<p>ID: {{album.id}}</p>
+<p>Metai: {{album.metai}}</p>
+<p>Žanras: {{album.zanras}}</p>
+<p>Kaina internete: {{album.kaina_online}}</p>
+<p>Kaina fizinėje parduotuvėje: {{album.kaina_store}}</p>
+<p><a href="/albumas/edit/{{album.id}}">redaguoti</a></p>
+{%endblock%}

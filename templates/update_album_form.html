@@ -1,0 +1,19 @@
+{%extends "base.html"%}
+{%block content%}
+<h3>Redaguoti {{album.atlikejas}} - {{album.pavadinimas}}</h3>
+<form action="" method="post">
+  <p>Albumo atlikėjas:</p>
+  <p><input type="text" value="{{album.atlikejas}}" name="artist"></p>
+  <p>Albumo pavadinimas:</p>
+  <p><input type="text" value="{{album.pavadinimas}}" name="title"></p>
+  <p>Albumo metai:</p>
+  <p><input type="text" value="{{album.metai}}" name="year"></p>
+  <p>Albumo žanras:</p>
+  <p><input type="text" value="{{album.zanras}}" name="genre"></p>
+  <p>Albumo kaina internetu:</p>
+  <p><input type="text" value="{{album.kaina_online}}" name="price_online"></p>
+  <p>Albumo kaina fizinėje parduotuvėje:</p>
+  <p><input type="text" value="{{album.kaina_store}}" name="price_store"></p>
+  <p><input type="submit" value="išsaugoti"></p>
+</form>
+{%endblock%}

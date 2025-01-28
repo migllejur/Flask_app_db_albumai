@@ -4,7 +4,7 @@ db = SQLAlchemy()
 
 
 class Albumai(db.Model):
-    __tablename__ = "projektas"
+    __tablename__ = "albumai"
     id = db.Column(db.Integer, primary_key=True)
     atlikejas = db.Column(db.String)
     pavadinimas = db.Column(db.String)
